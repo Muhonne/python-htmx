@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Index Page</title>
+  <script src="https://unpkg.com/htmx.org@2.0.2/dist/htmx.js" integrity="sha384-yZq+5izaUBKcRgFbxgkRYwpHhHHCpp5nseXp0MEQ1A4MTWVMnqkmcuFez8x5qfxr" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Have some health!</h1>
+  <button hx-get="/api/timeseries/latest" hx-target="#latest">Get latest values</button>
+  <div id="latest"></div>
+  <button hx-get="/api/timeseries/latesthour" hx-target="#lasthour">Get last hour avr</button>
+  <div id="lasthour"></div>
+</body>
+</html>
